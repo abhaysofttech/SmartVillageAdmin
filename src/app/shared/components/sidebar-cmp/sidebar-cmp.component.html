@@ -1,0 +1,43 @@
+<div class="sidemenu_container">
+    <div class="logo"> <a class="simple-text logo-mini">
+            <div class="logo-img"><img src="../../../../assets/images/zf_logo.svg" style="width: 100%;"> </div>
+            <div class="logo-img-small"><img src="../../../../assets/images/zf_logo_small.svg" style="width: 100%;">
+            </div>
+        </a> <!-- <a class="simple-text logo-normal" >ZenForte </a> -->
+    </div>
+    <div class="sidebar-wrapper ps">
+        <!-- <div class="user"> <div class="photo"><img src="./assets/img/faces/avatar.jpg"></div> <div class="user-info"><a class="collapsed" data-toggle="collapse" href="#collapseExample"><span> Tania Andrew <b class="caret"></b></span></a> <div class="collapse" id="collapseExample"> <ul class="nav"> <li class="nav-item"><a class="nav-link" href="javascript:void(0)"><span class="sidebar-mini">MP</span><span class="sidebar-normal">My Profile</span></a> </li> <li class="nav-item"><a class="nav-link" href="javascript:void(0)"><span class="sidebar-mini">EP</span><span class="sidebar-normal">Edit Profile</span></a> </li> <li class="nav-item"><a class="nav-link" href="javascript:void(0)"><span class="sidebar-mini">S</span><span class="sidebar-normal">Settings</span></a></li> </ul> </div> </div> </div> -->
+        <!---->
+        <div class="nav-container">
+            <ul class="nav">
+                <li class="nav-item" *ngFor="let menuItem of menuItems"> <a class="nav-link" data-toggle="collapse"
+                        href="#{{menuItem.id}}" *ngIf="menuItem.state=='active'">
+                        <!-- <i class="fa fa-calendar"></i> --> <i class="material-icons">{{menuItem.icon}}</i>
+                        <p class="no-margin menuName" routerLink="{{menuItem.path}}" *ngIf="menuItem.path != ''">
+                            {{menuItem.title}} <b class="caret" *ngIf="menuItem.submenu"></b> </p>
+                        <p class="no-margin menuName" *ngIf="menuItem.path == ''">{{menuItem.title}} <b class="caret"
+                                *ngIf="menuItem.submenu"></b> </p>
+                    </a> <a class="nav-link inactiveMenu" *ngIf="menuItem.state=='inactive'">
+                        <!-- <i class="fa fa-calendar"></i> --> <i class="material-icons">{{menuItem.icon}}</i>
+                        <p class="no-margin menuName">{{menuItem.title}} </p>
+                    </a>
+                    <div class="collapse" id="{{menuItem.id}}">
+                        <ul class="nav">
+                            <li class="sub-nav-item no-padding no-margin" *ngFor="let submenuItem of menuItem.submenu">
+                                <a class="nav-link" routerLinkActive="active" routerLink="{{submenuItem.path}}"
+                                    (click)="setBreadcrumb(submenuItem.title)"
+                                    [ngClass]="{'inactiveMenu':submenuItem.state}"> <i
+                                        class="material-icons">{{submenuItem.icon}}</i>
+                                    <p class="no-margin menuName">{{submenuItem.title}}
+                                        <!-- <b class="caret"></b> -->
+                                    </p>
+                                </a> </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar-background" style="background-image: url(../../../../assets/images/sidebar-1.jpg)"></div>
+</div>
+<div class="closeToSideMenu" (click)="closeMobileSideMenu()"></div>

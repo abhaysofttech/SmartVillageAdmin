@@ -1,0 +1,18 @@
+{
+    "/ZenForteWebServices_PreRelease/*":{
+        "target":"https://zenforte.zensar.com",
+        "secure":false,
+        "changeOrigin":true
+    },
+    "/ZenForteWebServices_Performance/*":{
+        "target":"https://zenforte.zensar.com",
+        "secure":false,
+        "changeOrigin":true
+    },
+    "/v1/*":{
+        "target":" http://localhost:6080",
+        "secure":false,
+        "changeOrigin":true
+    }
+
+}

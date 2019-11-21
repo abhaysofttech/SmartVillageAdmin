@@ -1,0 +1,45 @@
+.config-action {
+    border: 1px solid #ccc;
+    width: 175px;
+    height: 175px;
+    border-radius: 10px;
+    padding: 10px;
+    vertical-align: baseline;
+    text-align: center;
+    align-items: center;
+    display: inline-grid;
+}
+.config-action i {
+    display: block;
+    font-size: 4rem;
+    text-align: center;
+    color: #049ad2;
+}
+
+.config-action-title {
+    font-size: 1.4rem;
+    line-height: normal;
+    text-align: center;
+}
+
+.card.proj_config_desc {
+    padding: 13px;
+    min-height: 100%;
+}
+
+/* Css is used to modify view for svg *************************/
+#copy_config_group:hover #copy_blue,
+#copy_config_group:hover~#curve3{
+    display: none;
+}
+
+#edit_config_group:hover #edit_blue,
+#edit_config_group:hover~#curve2 {
+    display: none;
+}
+
+#new_config_group:hover #new_blue-2,
+#new_config_group:hover~#curve1 {
+    display: none;
+}
+/* End **************************** */

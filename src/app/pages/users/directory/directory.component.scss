@@ -1,0 +1,319 @@
+.padd-30 {
+    padding: 30px;
+    position: relative;
+}
+.viewOption {
+	display: inline-block;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+}
+.viewOption ul {
+    list-style: none;
+    display: inline-flex;
+    padding: 0px;
+    margin: 0;
+}
+.viewOption ul li {
+	padding: 7px 8px;
+    background: #e8e8e8;
+	font-size: .8rem;
+	cursor: pointer;
+}
+.viewOption ul li.active{
+	background: #ccc;
+	color: #08789b;
+}
+
+.viewOption ul li:first-child{
+	border-radius: 50px 0 0 50px;
+}
+
+.viewOption ul li:last-child{
+	border-radius: 0 50px 50px 0;
+}
+.viewOption ul li i{
+margin-right: 6px;
+}
+.profile-block {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+    padding: 8px;
+    vertical-align: baseline;
+    text-align: center;
+    align-items: center;
+    display: inline-grid;
+    border-top: 4px solid #049ad2;
+    margin-top: 13px;
+}
+span.work-location {
+    font-size: .8rem;
+}
+.profile-block.superParent {
+	border-top: 4px solid #fa0;
+	opacity: .6;
+
+}
+.associate-details {
+    line-height: 18px;
+}
+.asssociate-name {
+    color: #222222;
+}
+.associate-details i{
+    padding-right: 10px;
+}
+.associate-details-more {
+    line-height: 5px;
+    position: relative;
+    bottom: -7px;
+}
+.associate-details-more i{
+    color: #0190e7;
+}
+
+.profile-block.parent:before, .profile-block.superParent:before{
+    border-left: 2px solid #cccccc;
+    content: "";
+    display: block;
+    height: 1.5em;
+    left: calc(50% - .03125em);
+    position: absolute;
+    width: 0.0625em;
+    top: calc(100% + 0.01126em);
+}
+
+.child:before {
+    border-top: 0.0625em solid #cccccc;
+    content: "";
+    display: block;
+    height: 0.0625em;
+    left: -0.03125em;
+    position: relative;
+    top: 13px;
+    width: 100%;
+    max-width: calc(100% + 0.0625em);
+    padding: 10px 0;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    // margin-bottom: 15px;
+}
+
+.profile-pic {
+    position: relative;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+}
+.contact {
+	position: relative;
+    right: 0px;
+    top: 0;
+}
+.contact i {
+    padding: 10px;
+    background: #ededed;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    display: grid;
+    align-items: center;
+    margin-bottom: 2px;
+	font-size: .9rem;
+	cursor: pointer;
+}
+.contact i:hover{
+	background: #ccc;
+}
+// Cutomize css **********************
+
+.tf-tree {
+	font-size: 16px;
+	overflow: auto
+}
+
+.tf-tree * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0
+}
+
+.tf-tree ul {
+	display: inline-flex
+}
+
+.tf-tree li {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 0 1em;
+	position: relative
+}
+
+.tf-tree li ul {
+	margin: 2em 0
+}
+
+.tf-tree li li:before {
+	border-top: .0625em solid #000;
+	content: "";
+	display: block;
+	height: .0625em;
+	left: -.03125em;
+	position: absolute;
+	top: -1.03125em;
+	width: 100%
+}
+
+.tf-tree li li:first-child:before {
+	left: calc(50% - .03125em);
+	max-width: calc(50% + .0625em)
+}
+
+.tf-tree li li:last-child:before {
+	left: auto;
+	max-width: calc(50% + .0625em);
+	right: calc(50% - .03125em)
+}
+
+.tf-tree li li:only-child:before {
+	display: none
+}
+
+.tf-tree li li:only-child>.tf-nc:before,
+.tf-tree li li:only-child>.tf-node-content:before {
+	height: 1.0625em;
+	top: -1.0625em
+}
+
+.tf-tree .tf-nc,
+.tf-tree .tf-node-content {
+	border: .0625em solid #000;
+	display: inline-block;
+	padding: .5em 1em;
+	position: relative
+}
+
+.tf-tree .tf-nc:before,
+.tf-tree .tf-node-content:before {
+	top: -1.03125em
+}
+
+.tf-tree .tf-nc:after,
+.tf-tree .tf-nc:before,
+.tf-tree .tf-node-content:after,
+.tf-tree .tf-node-content:before {
+	border-left: .0625em solid #000;
+	content: "";
+	display: block;
+	height: 1em;
+	left: calc(50% - .03125em);
+	position: absolute;
+	width: .0625em
+}
+
+.tf-tree .tf-nc:after,
+.tf-tree .tf-node-content:after {
+	top: calc(100% + .03125em)
+}
+
+.tf-tree .tf-nc:only-child:after,
+.tf-tree .tf-node-content:only-child:after,
+.tf-tree>ul>li>.tf-nc:before,
+.tf-tree>ul>li>.tf-node-content:before {
+	display: none
+}
+
+.tf-tree.tf-gap-sm li {
+	padding: 0 .6em
+}
+
+.tf-tree.tf-gap-sm li>.tf-nc:before,
+.tf-tree.tf-gap-sm li>.tf-node-content:before {
+	height: .6em;
+	top: -.6em
+}
+
+.tf-tree.tf-gap-sm li>.tf-nc:after,
+.tf-tree.tf-gap-sm li>.tf-node-content:after {
+	height: .6em
+}
+
+.tf-tree.tf-gap-sm li ul {
+	margin: 1.2em 0
+}
+
+.tf-tree.tf-gap-sm li li:before {
+	top: -.63125em
+}
+
+.tf-tree.tf-gap-sm li li:only-child>.tf-nc:before,
+.tf-tree.tf-gap-sm li li:only-child>.tf-node-content:before {
+	height: .6625em;
+	top: -.6625em
+}
+
+.tf-tree.tf-gap-lg li {
+	padding: 0 1.5em
+}
+
+.tf-tree.tf-gap-lg li>.tf-nc:before,
+.tf-tree.tf-gap-lg li>.tf-node-content:before {
+	height: 1.5em;
+	top: -1.5em
+}
+
+.tf-tree.tf-gap-lg li>.tf-nc:after,
+.tf-tree.tf-gap-lg li>.tf-node-content:after {
+	height: 1.5em
+}
+
+.tf-tree.tf-gap-lg li ul {
+	margin: 3em 0
+}
+
+.tf-tree.tf-gap-lg li li:before {
+	top: -1.53125em
+}
+
+.tf-tree.tf-gap-lg li li:only-child>.tf-nc:before,
+.tf-tree.tf-gap-lg li li:only-child>.tf-node-content:before {
+	height: 1.5625em;
+	top: -1.5625em
+}
+
+.tf-tree li.tf-dotted-children .tf-nc:after,
+.tf-tree li.tf-dotted-children .tf-nc:before,
+.tf-tree li.tf-dotted-children .tf-node-content:after,
+.tf-tree li.tf-dotted-children .tf-node-content:before {
+	border-left-style: dotted
+}
+
+.tf-tree li.tf-dotted-children li:before {
+	border-top-style: dotted
+}
+
+.tf-tree li.tf-dotted-children>.tf-nc:before,
+.tf-tree li.tf-dotted-children>.tf-node-content:before {
+	border-left-style: solid
+}
+
+.tf-tree li.tf-dashed-children .tf-nc:after,
+.tf-tree li.tf-dashed-children .tf-nc:before,
+.tf-tree li.tf-dashed-children .tf-node-content:after,
+.tf-tree li.tf-dashed-children .tf-node-content:before {
+	border-left-style: dashed
+}
+
+.tf-tree li.tf-dashed-children li:before {
+	border-top-style: dashed
+}
+
+.tf-tree li.tf-dashed-children>.tf-nc:before,
+.tf-tree li.tf-dashed-children>.tf-node-content:before {
+	border-left-style: solid
+}

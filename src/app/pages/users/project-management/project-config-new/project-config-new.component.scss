@@ -1,0 +1,10 @@
+.projectSpecValue{
+    display: inline-flex;
+    width: 111px;
+    margin-left: 20px;
+}
+.projectSpecValue .form-control[readonly] {
+    background-color: #ffffff;
+    opacity: 1;
+    cursor: default;
+}

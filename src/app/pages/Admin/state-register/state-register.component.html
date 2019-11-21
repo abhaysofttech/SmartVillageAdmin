@@ -1,0 +1,77 @@
+<div class="row no-margin justify-content-md-center">
+  <div class="col-12 result-container">
+
+    <div class="card">
+      <div class="main-card-header">
+        <span>Dashboard</span>
+        <i class="fa fa-arrow-circle-right" style="padding: 0 10px;"></i>
+        <!-- <span>{{breadCrumb}}</span> -->
+        <span>Register New State</span>
+
+      </div>
+      <div class="padd-30">
+        <div class="wrapper">
+          <div class="sidebar">
+          </div>
+          <div class="main-panel">
+            <div class="main-content">
+              <div class="container-fluid">
+
+                <div class="login-reg-panel back2">
+                  <form [formGroup]="stateregisterForm" (ngSubmit)="onSubmit()">
+                    <div class="white-panel">
+                      <div class="login-pannel">
+                        <div class="row no-margin">
+                          <div class="col-4">
+                            <div class="login-show row">
+                              <div class="login-sec col-12"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                <input type="text" formControlName="statename" class="form-control"
+                                  placeholder="Enter Your State Name"
+                                  [ngClass]="{ 'is-invalid': submitted && f.statename.errors }" />
+                                <div *ngIf="submitted && f.statename.errors" class="invalid-feedback">
+                                  <div *ngIf="f.statename.errors.required">Please Enter State Name</div>
+                                </div>
+                              </div>
+                              <div class="login-sec col-12"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                <input type="text" formControlName="statenameHindi" class="form-control"
+                                  placeholder="Enter State name in Hindi"
+                                  [ngClass]="{ 'is-invalid': submitted && f.statenameHindi.errors }" />
+                                <div *ngIf="submitted && f.statenameHindi.errors" class="invalid-feedback">
+                                  <div *ngIf="f.statenameHindi.errors.required">Please Enter State Name in Hindi</div>
+                                </div>
+                              </div>
+                              <div class="login-sec col-12"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                <input type="text" formControlName="statenameMarathi" class="form-control"
+                                  placeholder="Enter State name in Marathi"
+                                  [ngClass]="{ 'is-invalid': submitted && f.statenameMarathi.errors }" />
+                                <div *ngIf="submitted && f.statenameMarathi.errors" class="invalid-feedback">
+                                  <div *ngIf="f.statenameMarathi.errors.required">Please Enter State Name in Marathi
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="signin-sec col-12 margin-top">
+                                <input type="submit" [disabled]="loading" class="form-control connect-btn"
+                                  name="Register" value="Register">
+                                <input type="button" [disabled]="loading" class="form-control back-btn" name="Cancel"
+                                  routerLink="/dashboard" value="Cancel">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>

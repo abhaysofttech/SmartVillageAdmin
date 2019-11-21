@@ -1,0 +1,37 @@
+
+
+
+<!-- <ion-header>
+  <div class="row no-margin header-part">
+    <div class="col-12 border-gray center-item">
+        <ion-icon name="arrow-back" (click)="myBackButton()" class="icon-header"></ion-icon>
+        <span class="hindiFont">
+          My complaint list
+        </span>
+    </div>
+ 
+  </div>
+</ion-header> -->
+
+<!-- <ion-content>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-content> -->
+
+
+<!-- <app-header></app-header>
+<app-personal-info></app-personal-info> -->
+<div class="wrapper">
+  <div class="sidebar">
+      <app-sidebar-cmp></app-sidebar-cmp>
+  </div>
+  <div class="main-panel">
+      <app-header></app-header>
+          <div class="main-content">
+              <div class="container-fluid">
+                      <!-- <app-personal-info></app-personal-info> -->
+                      <router-outlet></router-outlet>
+                      <!-- <app-project-config></app-project-config> -->
+              </div>
+          </div>
+  </div>
+</div>

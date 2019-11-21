@@ -1,0 +1,31 @@
+<div class="common-modal">
+  <div class="common-modal-body">
+    <form  (ngSubmit)="onSubmit()">
+    <label for="SelectArea">Area</label>
+
+    <select class="form-control" (change)="changeArea($event.target.value)">
+      <option *ngFor="let area of initiativesArea" value="{{area}}">
+        {{area}}</option>
+    </select>
+
+    <label for="SelectArea"> Sub Area</label>
+
+    <select class="form-control" (change)="changeSubArea($event.target.value)">
+      <option *ngFor="let subarea of subArea" value="{{subarea}}">
+        {{subarea}}</option>
+    </select>
+
+    <label for="SelectArea">Track</label>
+
+    <select class="form-control">
+      <option *ngFor="let track of track" value="{{track}}">
+        {{track}}</option>
+    </select>
+
+
+<!--   
+    <ng-content></ng-content> -->
+  </form>
+  </div>
+</div>
+<div class="common-modal-background"></div>
